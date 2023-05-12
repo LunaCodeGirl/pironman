@@ -198,7 +198,7 @@ def install():
     #
     if "--no-dep" not in options:
         do(msg="update apt",
-            cmd='apk update -y'
+            cmd='apk update '
         )
         do(msg="update pip3",
             cmd='python3 -m pip install --upgrade pip'
@@ -206,7 +206,7 @@ def install():
         ##
         print("Install dependency")
         do(msg="apt --fix-broken",
-            cmd="apt --fix-broken install -y"
+            cmd="apt --fix-broken install "
         )
         # # check & install raspi-config
         # _status, _ = run_command("raspi-config nonint")
@@ -226,7 +226,7 @@ def install():
         #
         for dep in APT_INSTALL_LIST:
             do(msg="install %s"%dep,
-                cmd='apk add %s -y'%dep)
+                cmd='apk add %s '%dep)
         for dep in PIP_INSTALL_LIST:
             do(msg="install %s"%dep,
                 cmd='pip3 install %s'%dep)
