@@ -27,13 +27,13 @@ APT_INSTALL_LIST = [
     'net-tools',
     'py3-smbus',
     'i2c-tools',
-    'libtiff5-dev', # https://pillow.readthedocs.io/en/latest/installation.html
-    'libopenjp2-7-dev',
-    'zlib1g-dev',
-    'libfreetype6-dev',
+    'tiff-dev', # https://pillow.readthedocs.io/en/latest/installation.html
+    'openjpeg-dev',
+    'zlib',
+    'freetype',
     'libpng-dev',
-    'libxcb1-dev',
-    'build-essential', # arm-linux-gnueabihf-gcc for pip building
+    'libxcb',
+    'py3-clang15', # arm-linux-gnueabihf-gcc for pip building
     'py3-rpi.gpio',
     'py3-dev', # for RPi.GPIO, rpi-ws281x pip building
 ]
